@@ -7,20 +7,10 @@ filename = os.path.join(dirname, 'Files/nflTeams.csv')
 nfl_dict = {"name":"name","abv":"abv"}
 nfl_dicts = []
 
-urls = []
+urls = ["ATL","BUF","CAR","CHI","CIN","CLE","CLT","CRD","DAL","DEN","DET","Gnb","HTX","JAx","Kan","MIA","MIN","NOR","Nwe","NYG","NYJ","OTI","PHI","PIT","rai","RAM","rav","SDG","SEA","SFo","Tam","WAS"]
 
 
-df = pd.read_csv(filename)
-names = pd.DataFrame(df).iterrows()
-
-x = 0
-
-for i in names:
-    nfl_dict = {"name": i[1][0], "abv": i[1][1], "{}".format(i[1][1]):x}
-    nfl_dicts.append(nfl_dict)
-    x += 1
-
-print(nfl_dicts)
+print(len(urls))
 
 #Nfl Players
 
